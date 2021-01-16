@@ -44,6 +44,12 @@ nav {
     justify-content: space-evenly;
 }
 
+@media screen and (max-width: 1200px) {
+    nav {
+        display: none !important;
+    }
+}
+
 h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -82,10 +88,16 @@ section {
 
 .textContainer {
     margin: auto;
+    /* max-height: calc(100vh - 350px); */
+}
+
+.firstTextContainer {
+    margin: 350px auto auto auto;
 }
 
 .imageContainer {
     width: 100%;
+    max-height: 100vh;
 }
 
 .aboutContainer {
@@ -103,29 +115,11 @@ section {
     z-index: 6;
 }
 
-.section1 div, .section1 .doorPicture {
-    margin-top: 350px;
-}
-
-.section1 .doorPicture {
+.doorPicture {
     grid-column: 1 / 2;
     justify-self: end;
     margin: 350px 7vw auto 0;
-    height: 480px;
-}
-
-.section3 .doorPicture {
-    grid-column: 1 / 2;
-    justify-self: end;
-    margin: auto 7vw auto 0;
-    height: 480px;
-}
-
-.section5 .doorPicture{
-    grid-column: 2 / 3;
-    justify-self: left;
-    margin: auto 7vw auto 0;
-    height: 480px;
+    height: calc(100vh - 400px);
 }
 
 .section2 .coopPicture {
