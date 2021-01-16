@@ -92,7 +92,7 @@ section {
 }
 
 .firstTextContainer {
-    margin: 350px auto auto auto;
+    margin: 350px auto auto 3vw;
 }
 
 .imageContainer {
@@ -111,15 +111,15 @@ section {
 .section1 {
     background-color: #fdfeeb;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 47% 53%;
     z-index: 6;
 }
 
 .doorPicture {
     grid-column: 1 / 2;
     justify-self: end;
-    margin: 350px 7vw auto 0;
-    height: calc(100vh - 400px);
+    margin: 320px 3vw auto 0;
+    height: calc(100vh - 350px);
 }
 
 .section2 .coopPicture {
