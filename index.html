@@ -1,6 +1,8 @@
+<!DOCTYPE html>
 <html> 
     <head>
         <meta charset="utf-8">
+        <title>SmartChicken</title>
         <link rel="stylesheet" href="style.css">
         <link href="assets/favicon.png" type="image/png" rel="icon">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -13,10 +15,10 @@
             <div class="header__bg"></div>
             <img src="assets/logoName.png" alt="Smart Chicken logo" height="280">
             <nav>
-                <a href="#o-produkte">O produkte</a>
-                <a href="#navod">Návod</a>
-                <a href="#kontakt">Kontakt</a>
-                <a href="#obchod"><img src="assets/shopping_car.png" class="cart" alt="cart"></a>
+                <a href="#o-produkte" class="toAbout">O produkte</a>
+                <a href="#navod" class="toManual">Návod</a>
+                <a href="#kontakt" class="toContact">Kontakt</a>
+                <a href="#obchod" class="toEshop"><img src="assets/shopping_car.png" class="cart" alt="cart"></a>
             </nav>
         </header>
         <div class="container">
@@ -29,22 +31,22 @@
                         zotmie a môžte ísť kurín znovu zavrieť, aby vám ich predátori <br>
                         nezlikvidovali?
                     </p>
-                    <button class="my-button">
+                    <button class="my-button toEshop">
                         <img src="assets/shopping_car.png" class="cart" alt="cart">
                         <div>Mám záujem!</div>
                     </button>
                 </div>
             </section>
-            <section id="o-produkte" class="section2">
+            <section class="section2">
                 <div class="textContainer aboutContainer">
                     <h2>O produkte</h2>
-                    <p class="paragraph1"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    <p class="paragraph1"> <b>Lorem ipsum</b> dolor sit amet, consectetur <b>adipiscing elit</b>, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. <b>Duis aute irure</b> dolor in reprehenderit
                         in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
                         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
-                    <button class="my-button">
+                    <button class="my-button toEshop">
                         <img src="assets/shopping_car.png" class="cart" alt="cart">
                         <div>Mám záujem!</div>
                     </button>
@@ -63,43 +65,42 @@
                     <p class="paragraph1"> Zaobstarali ste si nášho skvelého pomocníka a neviete si poradiť s inštaláciou?
                         Stačí si pozrieť tento videonávod a hneď vám bude <b> všetko jasné! </b>
                     </p>
-                    <button class="my-button">
+                    <button class="my-button toEshop">
                         <img src="assets/shopping_car.png" class="cart" alt="cart">
                         <div>Mám záujem!</div>
                     </button>
                 </div>
             </section>
             <section id="obchod" class="section4">
-                <div class="eshopContainer textContainer">
-                    <h2>Objednajte už dnes!</h2>
-                    <div class="ifirstname">
-                        <p class="inputLabel"></p>
-                        <input type="text" class="my-input" placeholder="Meno">
-                    </div>
-                    <div class="ilastname">
-                        <p class="inputLabel"></p>
-                        <input type="text" class="my-input" placeholder="Priezvisko">
-                    </div>
+                <form autocomplete="off">
+                    <div  class="eshopContainer textContainer">
+                        <h2>Objednajte už dnes!</h2>
+                    
+                        <!-- <div class="ifirstname"> -->
+                            <input id="meno" type="text" class="my-input ifirstname" placeholder="Meno">
+                        <!-- </div> -->
+                        <div class="ilastname">
+                            <input id="priezvisko" type="text" class="my-input" placeholder="Priezvisko">
+                        </div>
 
-                    <div class="iaddress">
-                        <p class="inputLabel"></p>
-                        <input type="text" class="my-input" placeholder="Adresa"> 
+                        <div class="iaddress">
+                            <input id="adresa" type="text" class="my-input" placeholder="Adresa"> 
+                        </div>
+
+                        <div class="icity">
+                            <input id="mesto" type="text" class="my-input" placeholder="Mesto"><br>
+                        </div>
+                        <div class="ipsc"></div>
+                            <input id="psc" type="text" class="my-input ipsc" placeholder="PSČ"><br>
+                       
+
+                        <button class="my-button submit">
+                            <img src="assets/shopping_car.png" class="cart" alt="cart">
+                            <div>Objednať</div>
+                        </button>
                     </div>
-                    
-                    <div class="icity">
-                        <p class="inputLabel"></p>
-                        <input type="text" class="my-input" placeholder="Mesto"><br>
-                    </div>
-                    <div class="ipsc">
-                        <p class="inputLabel"></p>
-                        <input type="text" class="my-input" placeholder="PSČ"><br>
-                    </div>
-                    
-                    <button class="my-button submit">
-                        <img src="assets/shopping_car.png" class="cart" alt="cart">
-                        <div>Objednať<div>
-                    </button>
-                </div>
+                </form>
+                
             </section>
             <section id="kontakt" class="section5">
                 <div class="textContainer">
@@ -120,5 +121,47 @@
                 </div>
             </section>
         </div>
+
+        <script>
+            $(document).ready(function() {
+                // osetrenie linku #o-produkte
+                $( ".toAbout" ).click(function() {
+                    scroll(1);
+                });
+
+                // osetrenie linku #navod
+                $( ".toManual" ).click(function() {
+                    scroll(2);
+                });
+
+                // kliknutie na tlacidlo do obchodu a osetrenie linku #obchod
+                $( ".toEshop" ).click(function() {
+                    scroll(3);
+                });
+
+                // osetrenie linku #kontakt
+                $( ".toContact" ).click(function() {
+                    scroll(4);
+                });
+
+                function scroll(coeficient) {
+                    var vheight = $(window).height();
+                    $('html, body').animate({
+                      scrollTop: coeficient * vheight
+                    }, 500);
+                }
+
+                // submit formulara v obchode
+                $('form').submit(function(){
+                    notification = 'Produkt bol objednaný!'
+                    notification += '\nMeno: ' + $('#meno').val() + ( $('#meno').val() ? ' ' : '' ) + $('#priezvisko').val();
+                    notification += '\nAdresa: ' + $('#adresa').val() + ( $('#adresa').val() ? ' ' : '' ) + $('#psc').val() + ' ' + $('#mesto').val();
+                    if ($('#meno').val() || $('#priezvisko').val() || $('#adresa').val() || $('#psc').val() || $('#mesto').val()) {
+                        alert(notification);
+                    }
+                    return false;
+                });
+            });
+        </script>
     </body>
 </html>

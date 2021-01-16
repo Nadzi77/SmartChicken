@@ -1,3 +1,11 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
     margin: 0;
 }
@@ -12,6 +20,18 @@ header {
 
 header * {
     position: relative;
+}
+
+.header__bg {
+    border-bottom: #fbef00;
+    border-bottom-width: 7px;
+    border-bottom-style: solid;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #ff9900, #ffaa00);
+    transform: skewY(-6deg);
+    transform-origin: top left;
 }
 
 nav {
@@ -74,19 +94,6 @@ section {
 
 .manualContainer {
     padding: 0 7rem 0 5rem;
-}
-
-
-.header__bg {
-    border-bottom: #fbef00;
-    border-bottom-width: 7px;
-    border-bottom-style: solid;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(45deg, #ff9900, #ffaa00);
-    transform: skewY(-6deg);
-    transform-origin: top left;
 }
 
 .section1 {
@@ -186,7 +193,6 @@ section {
 
 .my-button:hover {
     transform: scale(1.03);
-    /* transform: ; */
 }
 
 .my-button div{
