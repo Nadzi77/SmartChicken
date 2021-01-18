@@ -6,7 +6,7 @@
         <title>SmartChicken</title>
         <link rel="stylesheet" href="style.css" type="text/css">
         <link rel="stylesheet" href="style_laptop.css" type="text/css" media="screen and (max-width:1600px)">
-        <link rel="stylesheet" href="style_mobile.css" type="text/css" media="screen and (max-width:380px)">
+        <link rel="stylesheet" href="style_mobile.css" type="text/css" media="screen and (max-width:520px)">
         <link href="assets/favicon.png" type="image/png" rel="icon">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
     <body>
         <header>
             <div class="header__bg"></div>
-            <img src="assets/logoName.png" alt="Smart Chicken logo" height="280">
+            <img src="assets/logoName.png" alt="Smart Chicken logo" height="280" class="logo">
             <nav>
                 <a href="#o-produkte" class="toAbout">O produkte</a>
                 <a href="#navod" class="toManual">Návod</a>
@@ -34,49 +34,54 @@
                         zotmie a môžte ísť kurín znovu zavrieť, aby vám ich predátori <br>
                         nezlikvidovali?
                     </p>
-                    <button class="my-button toEshop">
+                    <button class="my-button toEshop onlyLarge">
                         <img src="assets/shopping_car.png" class="cart" alt="cart">
                         <div>Mám záujem!</div>
                     </button>
                 </div>
+                <button id="special" class="my-button toEshop">
+                    <img src="assets/shopping_car.png" class="cart" alt="cart">
+                    <div>Mám záujem!</div>
+                </button>
             </section>
             <section class="section2">
-                <div class="textContainer aboutContainer">
-                    <h2>O produkte</h2>
+                <div class="aboutContainer">
+                    <h2>Ako to funguje?</h2>
                     <p class="paragraph1"> <b>Lorem ipsum</b> dolor sit amet, consectetur <b>adipiscing elit</b>, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                         ullamco laboris nisi ut aliquip ex ea commodo consequat. <b>Duis aute irure</b> dolor in reprehenderit
                         in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
                         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
-                    <button class="my-button toEshop">
+                    <button class="my-button toEshop onlyLarge">
                         <img src="assets/shopping_car.png" class="cart" alt="cart">
                         <div>Mám záujem!</div>
                     </button>
                 </div>
-                <div class="imageContainer">
+                <div class="imageContainer onlyLarge">
                     <img src="assets/coop.jpg" class="coopPicture" alt="Dvierka pre hydinu ukážka">
                 </div>
             </section>
             <section id="navod" class="section3">
-                <div class="youtubeVideo">
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VD9qw9S6POY" frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="textContainer manualContainer">
+
+                <div class="manualContainer">
                     <h2>Návod</h2>
                     <p class="paragraph1"> Zaobstarali ste si nášho skvelého pomocníka a neviete si poradiť s inštaláciou?
                         Stačí si pozrieť tento videonávod a hneď vám bude <b> všetko jasné! </b>
                     </p>
-                    <button class="my-button toEshop">
+                    <button class="my-button toEshop onlyLarge">
                         <img src="assets/shopping_car.png" class="cart" alt="cart">
                         <div>Mám záujem!</div>
                     </button>
                 </div>
+                <div class="youtubeVideo">
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VD9qw9S6POY" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </section>
             <section id="obchod" class="section4">
                 <form autocomplete="off">
-                    <div  class="eshopContainer textContainer">
+                    <div  class="eshopContainer">
                         <h2>Objednajte už dnes!</h2>
                     
                         <!-- <div class="ifirstname"> -->
