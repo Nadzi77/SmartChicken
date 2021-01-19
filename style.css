@@ -24,7 +24,7 @@ header * {
     position: relative;
 }
 
-.header__bg {
+.headerBackground {
     border-bottom: #fbef00;
     border-bottom-width: 7px;
     border-bottom-style: solid;
@@ -71,9 +71,6 @@ a:hover {
     transform: scale(1.2);
 }
 
-.container {
-    position: static;
-}
 section {
     position: sticky;
     height: 100vh;
@@ -264,7 +261,7 @@ section {
     display: flex;
 }
 
-.contai{
+.contacts{
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -295,11 +292,11 @@ section {
     transform: scale(1.04);
 }
 
-.contactContainer article {
+.contactContainer div {
     margin-left: 2rem;
 }
 
-#special {
+#mobileButton {
     display: none;
 }
 
@@ -308,12 +305,18 @@ section {
         font-size: 23px;
     }
 
-    .header__bg {
+    .headerBackground {
         transform: skewY(-4deg);
     }
 
     h2 {
         font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .firstTextContainer {
+        margin: 300px auto auto auto;
     }
 }
 

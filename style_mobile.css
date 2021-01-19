@@ -37,6 +37,7 @@ body {
 
 .firstTextContainer {
     margin: auto;
+    height: auto;
     grid-row: 2 / 3;
     grid-column: 2 / 3;
 }
@@ -76,7 +77,7 @@ body {
     padding: 5px 5px 0 1rem ;
 }
 
-#special {
+#mobileButton {
     display: block;
     margin: 0 auto auto auto;
     width: 70%;
@@ -97,7 +98,7 @@ body {
     padding: 1rem;
 }
 
-.contactContainer article {
+.contactContainer div {
     margin-left: 0;
     overflow: scroll;
 }

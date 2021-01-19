@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html> 
+<html lang="sk"> 
     <head>
         <meta charset="utf-8">
+        <meta name="author" content="Matúš Nadžady">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SmartChicken</title>
         <link rel="stylesheet" href="style.css" type="text/css">
-        <link rel="stylesheet" href="style_laptop.css" type="text/css" media="screen and (max-width:1600px)">
         <link rel="stylesheet" href="style_mobile.css" type="text/css" media="screen and (max-width:520px)">
         <link href="assets/favicon.png" type="image/png" rel="icon">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,7 +15,7 @@
     </head>
     <body>
         <header>
-            <div class="header__bg"></div>
+            <div class="headerBackground"></div>
             <img src="assets/logoName.png" alt="Smart Chicken logo" height="280" class="logo">
             <nav>
                 <a href="#o-produkte" class="toAbout">O produkte</a>
@@ -24,106 +24,92 @@
                 <a href="#obchod" class="toEshop"><img src="assets/shopping_car.png" class="cart" alt="cart"></a>
             </nav>
         </header>
-        <div class="container">
-            <section class="section1">
-                <img src="assets/doorPicture.png" class="doorPicture" alt="Dvierka pre hydinu">
-                <div class="firstTextContainer">
-                    <h2>Automatické dvierka pre hydinu</h2>
-                    <p class="paragraph1"> Máte už plné zuby každodenného vstávania kvôli otváraniu <br>
-                        kurína? Už vás nebaví sledovať večer oblohu, kedy sa konečne <br>
-                        zotmie a môžte ísť kurín znovu zavrieť, aby vám ich predátori <br>
-                        nezlikvidovali?
-                    </p>
-                    <button class="my-button toAbout onlyLarge">
-                        <img src="assets/shopping_car.png" class="cart" alt="cart"> Mám záujem!
-                    </button>
-                </div>
-                <button id="special" class="my-button toEshop">
-                    <img src="assets/shopping_car.png" class="cart" alt="cart">
-                    Mám záujem!
+        <section class="section1">
+            <img src="assets/doorPicture.png" class="doorPicture" alt="Dvierka pre hydinu">
+            <div class="firstTextContainer">
+                <h2>Automatické dvierka pre hydinu</h2>
+                <p class="paragraph1"> Máte už plné zuby každodenného vstávania kvôli otváraniu <br>
+                    kurína? Už vás nebaví sledovať večer oblohu, kedy sa konečne <br>
+                    zotmie a môžte ísť kurín znovu zavrieť, aby vám ich predátori <br>
+                    nezlikvidovali?
+                </p>
+                <button class="my-button toAbout onlyLarge">
+                    <img src="assets/shopping_car.png" class="cart" alt="cart"> Mám záujem!
                 </button>
-            </section>
-            <section class="section2">
-                <div class="aboutContainer">
-                    <h2>Ako to funguje?</h2>
-                    <p class="paragraph1"> <b>Lorem ipsum</b> dolor sit amet, consectetur <b>adipiscing elit</b>, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat. <b>Duis aute irure</b> dolor in reprehenderit
-                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <button class="my-button toManual onlyLarge">
-                        <img src="assets/shopping_car.png" class="cart" alt="cart">Mám záujem!
+            </div>
+            <button id="mobileButton" class="my-button toAbout">
+                <img src="assets/shopping_car.png" class="cart" alt="cart">Mám záujem!
+            </button>
+        </section>
+        <section class="section2">
+            <div class="aboutContainer">
+                <h2>Ako to funguje?</h2>
+                <p class="paragraph1"> <b>Lorem ipsum</b> dolor sit amet, consectetur <b>adipiscing elit</b>, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. <b>Duis aute irure</b> dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <button class="my-button toManual onlyLarge">
+                    <img src="assets/shopping_car.png" class="cart" alt="cart">Mám záujem!
+                </button>
+            </div>
+            <div class="imageContainer onlyLarge">
+                <img src="assets/coop.jpg" class="coopPicture" alt="Dvierka pre hydinu ukážka">
+            </div>
+        </section>
+        <section id="navod" class="section3">
+            <div class="manualContainer">
+                <h2>Návod</h2>
+                <p class="paragraph1"> Zaobstarali ste si nášho skvelého pomocníka a neviete si poradiť s inštaláciou?
+                    Stačí si pozrieť tento videonávod a hneď vám bude <b> všetko jasné! </b>
+                </p>
+                <button class="my-button toEshop onlyLarge">
+                    <img src="assets/shopping_car.png" class="cart" alt="cart">Mám záujem!
+                </button>
+            </div>
+            <div class="youtubeVideo">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VD9qw9S6POY" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section id="obchod" class="section4">
+            <form autocomplete="off">
+                <div  class="eshopContainer">
+                    <h2>Objednajte už dnes!</h2>
+                    <input id="meno" type="text" class="my-input ifirstname" placeholder="Meno">
+                    <input id="priezvisko" type="text" class="my-input ilastname" placeholder="Priezvisko">
+                    <input id="adresa" type="text" class="my-input iaddress" placeholder="Adresa"> 
+                    <input id="mesto" type="text" class="my-input icity" placeholder="Mesto"><br>
+                    <input id="psc" type="text" class="my-input ipsc" placeholder="PSČ"><br>
+                   
+                    <button class="my-button submit">
+                        <img src="assets/shopping_car.png" class="cart" alt="cart">
+                        Objednať
                     </button>
                 </div>
-                <div class="imageContainer onlyLarge">
-                    <img src="assets/coop.jpg" class="coopPicture" alt="Dvierka pre hydinu ukážka">
-                </div>
-            </section>
-            <section id="navod" class="section3">
-                <div class="manualContainer">
-                    <h2>Návod</h2>
-                    <p class="paragraph1"> Zaobstarali ste si nášho skvelého pomocníka a neviete si poradiť s inštaláciou?
-                        Stačí si pozrieť tento videonávod a hneď vám bude <b> všetko jasné! </b>
-                    </p>
-                    <button class="my-button toEshop onlyLarge">
-                        <img src="assets/shopping_car.png" class="cart" alt="cart">Mám záujem!
-                    </button>
-                </div>
-                <div class="youtubeVideo">
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VD9qw9S6POY" frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </section>
-            <section id="obchod" class="section4">
-                <form autocomplete="off">
-                    <div  class="eshopContainer">
-                        <h2>Objednajte už dnes!</h2>
-                    
-                        <!-- <div class="ifirstname"> -->
-                            <input id="meno" type="text" class="my-input ifirstname" placeholder="Meno">
-                        <!-- </div> -->
-                        <div class="ilastname">
-                            <input id="priezvisko" type="text" class="my-input" placeholder="Priezvisko">
+            </form>
+            
+        </section>
+        <section id="kontakt" class="section5">
+            <div class="contacts">
+                <h2 class="contactHeader">Kontakt</h2>
+                <div class="contactListContainer">
+                    <div class="contactContainer">
+                        <h4>Matúš Mrkvička</h4>
+                        <div>
+                            Záhradná 987, 765 34 Bratislava <br> matuskov.prvy.email@azet.sk <br> +421 909 123 456 <br>
                         </div>
-
-                        <div class="iaddress">
-                            <input id="adresa" type="text" class="my-input" placeholder="Adresa"> 
-                        </div>
-
-                        <div class="icity">
-                            <input id="mesto" type="text" class="my-input" placeholder="Mesto"><br>
-                        </div>
-                        <div class="ipsc"></div>
-                            <input id="psc" type="text" class="my-input ipsc" placeholder="PSČ"><br>
-                       
-
-                        <button class="my-button submit">
-                            <img src="assets/shopping_car.png" class="cart" alt="cart">
-                            Objednať
-                        </button>
                     </div>
-                </form>
-                
-            </section>
-            <section id="kontakt" class="section5">
-                <div class="contai">
-                    <h2 class="contactHeader">Kontakt</h2>
-                    <div class="contactListContainer">
-                        <div class="contactContainer">
-                            <h4>Matúš Mrkvička</h4>
-                            <article>Záhradná 987, 765 34 Bratislava <br> matuskov.prvy.email@azet.sk <br> +421 909 123 456 <br>
-                            </article>
-                        </div>
-                        <div class="contactContainer">
-                            <h4>Jozef Mrkvička</h4>
-                            <article>Ľudovíta Mocného 123, 012 34 Bratislava <br> sjozkom.donebabozkom@zoznam.sk <br> +421 909 123 456 <br>
-                            </article>
+                    <div class="contactContainer">
+                        <h4>Jozef Mrkvička</h4>
+                        <div>
+                            Ľudovíta Mocného 123, 012 34 Bratislava <br> sjozkom.donebabozkom@zoznam.sk <br> +421 909 123 456 <br>
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
 
         <script>
             $(document).ready(function() {
