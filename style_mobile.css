@@ -7,7 +7,7 @@ h2 {
     margin-right: 0.5rem;
 }
 
-p {
+body {
     font-size: 12px;
 }
 
@@ -52,80 +52,23 @@ p {
 .my-input {
     font-size: 12px;
     height: 2rem;
-    width: 100%;
-    padding: 0 1rem 0 1rem;
-    border-radius: 2rem;
-    outline: none;
-    border-color: #ff9900;
-    border-style: solid;
-    display: inline-block;
-    background-color: #fdfeeb;
 }
 
 .eshopContainer {
-    margin: auto;
-    display: grid;
     grid-template-columns: 10% 40% 40% 10%;
     grid-template-rows: 20vh 15vh 3rem 3rem 3rem 16vh 10vh;
-    grid-template-areas: ". . . . ."
-    ". A A A ."
-    ". B C . ."
-    ". D D . ."
-    ". E F . ."
-    ". G G . ."
-    ". . . . .";
 }
 
-/* .eshopContainer {
-    display: grid;
-    grid-template-columns: 10% 40% 40% 10%;
-    grid-template-rows: auto auto calc(80vh/6) calc(80vh/6) calc(80vh/6) calc(80vh/6) calc(80vh/6) calc(80vh/6) auto auto;
-    grid-template-areas: ". . . ."
-    ". A A ."
-    ". B B ."
-    ". C C ."
-    ". D D ."
-    ". E E ."
-    ". F F ."
-    ". G G ."
-    ". . . .";
-} */
-
-/* .ifirstname {
-    width: 80%;
-}
-.ilastname {
-    left: 0;
-    width: 80%;
-}
-.icity {
-    width: 80%;
-}
-.ipsc {
-    left: 0;
-    width: 80%;
-}
- */
 .submit {
     margin-top: 0.5rem;
 }
 
-.section5 {
-    display: none !important;
-}
-
 .my-button {
-    font-family:  'Montserrat', sans-serif;
     font-size: 12px;
     height: 2.2rem;
-    padding: 0; 
+    /* padding: 0;  */
     border-radius: 1rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
     box-shadow: 3px 3px 1px #fbef00;
-    background-color: #ff9900;
-    transition-duration: 0.1s;
 }
 
 .cart {
@@ -135,7 +78,7 @@ p {
 
 #special {
     display: block;
-    margin: auto;
+    margin: 0 auto auto auto;
     width: 70%;
     justify-self: center;
     grid-row: 3 / 4;
@@ -144,4 +87,17 @@ p {
 
 .onlyLarge {
     display: none;
+}
+
+.contactListContainer {
+    width: 80vw;   
+}
+
+.contactContainer {
+    padding: 1rem;
+}
+
+.contactContainer article {
+    margin-left: 0;
+    overflow: scroll;
 }

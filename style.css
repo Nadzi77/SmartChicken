@@ -8,6 +8,8 @@ html {
 
 body {
     margin: 0;
+    font-family: 'Literata', serif;
+    font-size: 20px;
 }
 
 header {
@@ -34,11 +36,7 @@ header * {
     transform-origin: top left;
 }
 
-@media screen and (min-width: 2000px) {
-    .header__bg {
-        transform: skewY(-4deg);
-    }
-}
+
 
 nav {
     margin: 1rem;
@@ -50,12 +48,6 @@ nav {
     justify-content: space-evenly;
 }
 
-@media screen and (max-width: 1200px) {
-    nav {
-        display: none !important;
-    }
-}
-
 h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -63,8 +55,6 @@ h2 {
 }
 
 p {
-    font-family: 'Literata', serif;
-    font-size: 23px;
     cursor: default;
 }
 
@@ -92,12 +82,10 @@ section {
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(179, 0, 0, 0.2);
 }
 
-.textContainer {
-    margin: auto;
-}
-
 .firstTextContainer {
     margin: 350px auto auto 3vw;
+    height: calc(100vh - 350px);
+    max-height: 650px;
 }
 
 .imageContainer {
@@ -169,30 +157,6 @@ section {
     height: calc(0.5625 * 40vw);
 }
 
-
-@media screen and (max-width: 1000px) {
-    body {
-        --ytWidth: 80vw;
-    }
-
-    .section3 {
-        flex-direction: column;
-    }
-
-    .manualContainer {
-        width: var(--ytWidth);
-    }
-    
-    .youtubeVideo {
-        width: var(--ytWidth);
-    }
-
-    .youtubeVideo iframe {
-        width: var(--ytWidth);
-        height: calc(0.5625 * var(--ytWidth));
-    }
-}
-
 .section4 {
     background-image: url('assets/unnamed.jpg');
     background-repeat: no-repeat;
@@ -200,24 +164,18 @@ section {
     z-index: 3;
 }
 
-.section5 {
-    background-color: #e5fcd4;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    z-index: 2;
-}
-
-
 .cart {
     height: 1.7rem;
-    padding: 5px 10px 0 1rem ;
+    position: relative;
+    top: 5px;
+    padding: 0 10px 0 1rem ;
 }
 
 .my-button {
     font-family:  'Montserrat', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     height: 3rem;
-    padding: 0 1rem 0 1rem; 
+    padding: 0 2rem 0 1rem; 
     border-radius: 2rem;
     border: none;
     outline: none;
@@ -225,17 +183,12 @@ section {
     box-shadow: 3px 5px 2px #fbef00;
     background-color: #ff9900;
     transition-duration: 0.1s;
+    text-align: center; 
+    line-height: 2.2rem;
 }
 
 .my-button:hover {
     transform: scale(1.03);
-}
-
-.my-button div{
-    display: inline;
-    position: relative;
-    top: -5px;
-    padding-right: 1rem;
 }
 
 .my-input {
@@ -305,6 +258,110 @@ section {
     margin: 2rem 0 0.2rem 1rem;
 }
 
+.section5 {
+    background-color: #e5fcd4;
+    z-index: 2;
+    display: flex;
+}
+
+.contai{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactHeader {
+    display: block;
+    margin-left: 2rem;
+}
+
+.contactListContainer {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.contactContainer {
+    margin: 2rem;
+    background-color: #fdfeeb;
+    padding: 4rem 3rem 5rem 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 6px 0 #fbef0022, 0 0 20px 0 #ff990055;
+    transition-duration: 0.1s;
+}
+
+.contactContainer:hover {
+    transform: scale(1.04);
+}
+
+.contactContainer article {
+    margin-left: 2rem;
+}
+
 #special {
     display: none;
 }
+
+@media screen and (min-width: 2000px) {
+    body {
+        font-size: 23px;
+    }
+
+    .header__bg {
+        transform: skewY(-4deg);
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
+
+    nav {
+        display: none !important;
+    }
+    
+    .contactHeader {
+        margin-left: 0.8rem;
+    }
+
+    .contactContainer {
+        margin: 0.8rem;
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        --ytWidth: 80vw;
+    }
+
+    .contactListContainer {
+        flex-direction: column;
+    }
+
+    .section3 {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .manualContainer {
+        width: var(--ytWidth);
+    }
+    
+    .youtubeVideo {
+        margin-top: 1rem;
+        width: var(--ytWidth);
+    }
+
+    .youtubeVideo iframe {
+        width: var(--ytWidth);
+        height: calc(0.5625 * var(--ytWidth));
+    }
+}
+
