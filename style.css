@@ -172,7 +172,7 @@ section {
     font-family:  'Montserrat', sans-serif;
     font-size: 20px;
     height: 3rem;
-    padding: 0 2rem 0 1rem; 
+    padding: 0 2rem 0 1rem;
     border-radius: 2rem;
     border: none;
     outline: none;
@@ -180,7 +180,7 @@ section {
     box-shadow: 3px 5px 2px #fbef00;
     background-color: #ff9900;
     transition-duration: 0.1s;
-    text-align: center; 
+    text-align: center;
     line-height: 2.2rem;
 }
 
@@ -246,7 +246,7 @@ section {
     margin: 4rem 0 0 0;
     grid-area: G;
 }
-::placeholder { 
+::placeholder {
     color: #8a9781;
     opacity: 1;
   }
@@ -328,7 +328,7 @@ section {
     nav {
         display: none !important;
     }
-    
+
     .contactHeader {
         margin-left: 0.8rem;
     }
@@ -356,7 +356,7 @@ section {
     .manualContainer {
         width: var(--ytWidth);
     }
-    
+
     .youtubeVideo {
         margin-top: 1rem;
         width: var(--ytWidth);
